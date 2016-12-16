@@ -7,8 +7,7 @@ public class FloatingSearchView_OnQueryChangeListenerImplementor
 		mono.android.IGCUserPeer,
 		com.arlib.floatingsearchview.FloatingSearchView.OnQueryChangeListener
 {
-/** @hide */
-	public static final String __md_methods;
+	static final String __md_methods;
 	static {
 		__md_methods = 
 			"n_onSearchTextChanged:(Ljava/lang/String;Ljava/lang/String;)V:GetOnSearchTextChanged_Ljava_lang_String_Ljava_lang_String_Handler:FloatingSearchViews.FloatingSearchView/IOnQueryChangeListenerInvoker, FloatingSearchView\n" +
@@ -32,7 +31,7 @@ public class FloatingSearchView_OnQueryChangeListenerImplementor
 
 	private native void n_onSearchTextChanged (java.lang.String p0, java.lang.String p1);
 
-	private java.util.ArrayList refList;
+	java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
 	{
 		if (refList == null)

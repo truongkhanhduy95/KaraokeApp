@@ -7,6 +7,7 @@ using System;
 using Android.Support.V7.Widget;
 using System.Collections.Generic;
 using Android.Content.PM;
+using System.Threading;
 
 namespace KaraokeApp
 {
@@ -14,7 +15,7 @@ namespace KaraokeApp
     public class MainActivity : ActivityBase
     {
         //Main ViewModel
-        private MainViewModel Vm = App.Locator.Main;
+        private static MainViewModel Vm = App.Locator.Main;
 
         //Controls
         RecyclerView recycler;
@@ -26,6 +27,7 @@ namespace KaraokeApp
         //back twice in 2seconds
         private const int TIME_DELAY = 2000;
         private static DateTime back_pressed;
+        private static int count_pressed = 0;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -35,10 +37,29 @@ namespace KaraokeApp
             SetContentView(Resource.Layout.Main);
 
             AddControls();
-            InitData();
+            //InitData();
+            LoadSongWithThread();
+            //new LoadSong(Vm, adapterSong, recycler).Execute();
             AddEvents();
         }
+        private void LoadSongWithThread()
+        {
 
+            new Thread(new ThreadStart(() =>
+            {
+                List<Song> listData1;
+                listData1 = new List<Song>();
+
+                listData1 = Vm.GetSongs("Dieu+anh+biet");
+
+                RunOnUiThread(() => ShowListSong(listData1));
+            })).Start();
+        }
+        private void ShowListSong(List<Song> listSong)
+        {
+            adapterSong = new SongAdapter(this, listSong);
+            recycler.SetAdapter(adapterSong);
+        }
         void AddControls()
         {
             recycler = FindViewById<RecyclerView>(Resource.Id.recycler);
@@ -53,7 +74,7 @@ namespace KaraokeApp
 
             listData = Vm.GetSongs("Dieu+anh+biet");
 
-            adapterSong = new SongAdapter(listData);
+            adapterSong = new SongAdapter(this, listData);
             recycler.SetAdapter(adapterSong);
         }
 
@@ -67,18 +88,27 @@ namespace KaraokeApp
         /// </summary>
         public override void OnBackPressed()
         {
-            var time = (DateTime.Now - back_pressed).Milliseconds;
 
-            if (time < TIME_DELAY)
+
+            if (count_pressed == 0)
             {
-                base.OnBackPressed();
+                back_pressed = DateTime.Now;
+                Toast.MakeText(this, "Press once again to exit!",
+                                       ToastLength.Short).Show();
+                count_pressed++;
             }
             else
             {
-                Toast.MakeText(this, "Press once again to exit!",
-                               ToastLength.Short).Show();
+                var time = (DateTime.Now - back_pressed).TotalMilliseconds;
+                if (time < TIME_DELAY)
+                {
+                    base.OnBackPressed();
+                }
+                else
+                {
+                    count_pressed = 0;
+                }
             }
-            back_pressed = DateTime.Now;
         }
     }
 }

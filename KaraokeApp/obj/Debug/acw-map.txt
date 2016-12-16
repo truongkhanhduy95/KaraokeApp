@@ -62,6 +62,18 @@ GalaSoft.MvvmLight.Helpers.ObservableAdapter`1, GalaSoft.MvvmLight.Platform;md5a
 GalaSoft.MvvmLight.Helpers.ObservableAdapter`1, GalaSoft.MvvmLight.Platform, Version=5.4.0.0, Culture=neutral, PublicKeyToken=null;md5a950ebd026c51bd391b1a543d7d8746e.ObservableAdapter_1
 GalaSoft.MvvmLight.Helpers.ObservableAdapter`1;md5a950ebd026c51bd391b1a543d7d8746e.ObservableAdapter_1
 galasoft.mvvmlight.helpers.ObservableAdapter_1;md5a950ebd026c51bd391b1a543d7d8746e.ObservableAdapter_1
+Square.OkHttp.Call/ActionCallback, Square.OkHttp;com.squareup.okhttp.Call_ActionCallback
+Square.OkHttp.Call+ActionCallback, Square.OkHttp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null;com.squareup.okhttp.Call_ActionCallback
+Square.OkHttp.Call.ActionCallback;com.squareup.okhttp.Call_ActionCallback
+com.squareup.okhttp.Call_ActionCallback;com.squareup.okhttp.Call_ActionCallback
+Square.Picasso.RequestCreator/ActionCallback, Square.Picasso;com.squareup.picasso.RequestCreator_ActionCallback
+Square.Picasso.RequestCreator+ActionCallback, Square.Picasso, Version=2.5.2.0, Culture=neutral, PublicKeyToken=null;com.squareup.picasso.RequestCreator_ActionCallback
+Square.Picasso.RequestCreator.ActionCallback;com.squareup.picasso.RequestCreator_ActionCallback
+com.squareup.picasso.RequestCreator_ActionCallback;com.squareup.picasso.RequestCreator_ActionCallback
+Square.Picasso.Picasso/IListenerImplementor, Square.Picasso;mono.com.squareup.picasso.Picasso_ListenerImplementor
+Square.Picasso.Picasso+IListenerImplementor, Square.Picasso, Version=2.5.2.0, Culture=neutral, PublicKeyToken=null;mono.com.squareup.picasso.Picasso_ListenerImplementor
+Square.Picasso.Picasso.IListenerImplementor;mono.com.squareup.picasso.Picasso_ListenerImplementor
+mono.com.squareup.picasso.Picasso_ListenerImplementor;mono.com.squareup.picasso.Picasso_ListenerImplementor
 Android.Support.V4.View.ViewPager/IOnPageChangeListenerImplementor, Xamarin.Android.Support.v4;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
 Android.Support.V4.View.ViewPager+IOnPageChangeListenerImplementor, Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
 Android.Support.V4.View.ViewPager.IOnPageChangeListenerImplementor;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor

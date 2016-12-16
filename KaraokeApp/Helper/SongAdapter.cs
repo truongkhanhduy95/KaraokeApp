@@ -12,16 +12,18 @@ using Android.Widget;
 using Android.Support.V7.Widget;
 using Android.Graphics;
 using System.Net;
+using Square.Picasso;
 
 namespace KaraokeApp
 {
     public class SongAdapter : RecyclerView.Adapter
     {
         List<Song> list;
-
-        public SongAdapter(List<Song> list)
+        Activity _activity;
+        public SongAdapter(Activity activity, List<Song> list)
         {
             this.list = list;
+            this._activity = activity;
         }
 
         public override int ItemCount
@@ -38,8 +40,7 @@ namespace KaraokeApp
 
             songHolder.txtSongName.Text = list[position].Name;
             songHolder.txtSinger.Text = "Chi dân";
-            //songHolder.txtDuration.Text = list[position].Duration;
-            songHolder.imgSong.SetImageBitmap(GetImageBitmapFromUrl(list[position].Image));
+            Picasso.With(_activity).Load(list[position].Image).Into(songHolder.imgSong);
         }
         private Bitmap GetImageBitmapFromUrl(string url)
         {
@@ -51,6 +52,7 @@ namespace KaraokeApp
                 if (imageBytes != null && imageBytes.Length > 0)
                 {
                     imageBitmap = BitmapFactory.DecodeByteArray(imageBytes, 0, imageBytes.Length);
+                    
                 }
             }
 
