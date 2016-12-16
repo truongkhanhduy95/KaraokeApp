@@ -47,5 +47,6 @@ C:\Users\Nam\Desktop\KaraokeApp\KaraokeApp\KaraokeApp\obj\Debug\res\drawable\vid
 C:\Users\Nam\Desktop\KaraokeApp\KaraokeApp\KaraokeApp\obj\Debug\R.cs.flag
 C:\Users\Nam\Desktop\KaraokeApp\KaraokeApp\KaraokeApp\obj\Debug\uploadflags.txt
 C:\Users\Nam\Desktop\KaraokeApp\KaraokeApp\KaraokeApp\obj\Debug\KaraokeApp.csprojResolveAssemblyReference.cache
+C:\Users\Nam\Desktop\KaraokeApp\KaraokeApp\KaraokeApp\obj\Debug\res\anim\fade.xml
 C:\Users\Nam\Desktop\KaraokeApp\KaraokeApp\KaraokeApp\obj\Debug\KaraokeApp.dll.mdb
 C:\Users\Nam\Desktop\KaraokeApp\KaraokeApp\KaraokeApp\bin\Debug\KaraokeApp.dll.mdb

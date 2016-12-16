@@ -13,6 +13,8 @@ using Android.Support.V7.Widget;
 using Android.Graphics;
 using System.Net;
 using Square.Picasso;
+using KaraokeApp.Helper;
+using Android.Views.Animations;
 
 namespace KaraokeApp
 {
@@ -40,7 +42,11 @@ namespace KaraokeApp
 
             songHolder.txtSongName.Text = list[position].Name;
             songHolder.txtSinger.Text = "Chi dân";
-            Picasso.With(_activity).Load(list[position].Image).Into(songHolder.imgSong);
+            Animation fadeInAnimation = AnimationUtils.LoadAnimation(_activity, Resource.Animation.fade);
+            songHolder.imgSong.StartAnimation(fadeInAnimation);
+            
+            //Picasso.With(_activity).Load(list[position].Image).Into(songHolder.imgSong);
+            BitmapHelper.LoadImage(_activity,list[position].Image, songHolder.imgSong);
         }
         private Bitmap GetImageBitmapFromUrl(string url)
         {
