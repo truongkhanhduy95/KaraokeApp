@@ -7,7 +7,8 @@ public class FloatingSearchView_OnMenuItemClickListenerImplementor
 		mono.android.IGCUserPeer,
 		com.arlib.floatingsearchview.FloatingSearchView.OnMenuItemClickListener
 {
-	static final String __md_methods;
+/** @hide */
+	public static final String __md_methods;
 	static {
 		__md_methods = 
 			"n_onMenuItemSelected:(Landroid/view/MenuItem;)V:GetOnMenuItemSelected_Landroid_view_MenuItem_Handler:FloatingSearchViews.FloatingSearchView/IOnMenuItemClickListenerInvoker, FloatingSearchView\n" +
@@ -31,7 +32,7 @@ public class FloatingSearchView_OnMenuItemClickListenerImplementor
 
 	private native void n_onMenuItemSelected (android.view.MenuItem p0);
 
-	java.util.ArrayList refList;
+	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
 	{
 		if (refList == null)

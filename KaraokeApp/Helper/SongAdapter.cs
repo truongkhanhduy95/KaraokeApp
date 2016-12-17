@@ -41,7 +41,7 @@ namespace KaraokeApp
             SongViewHolder songHolder = holder as SongViewHolder;
 
             songHolder.txtSongName.Text = list[position].Name;
-            songHolder.txtSinger.Text = "Chi dân";
+            songHolder.txtSinger.Text = "Chi dan";
             Animation fadeInAnimation = AnimationUtils.LoadAnimation(_activity, Resource.Animation.fade);
             songHolder.imgSong.StartAnimation(fadeInAnimation);
             

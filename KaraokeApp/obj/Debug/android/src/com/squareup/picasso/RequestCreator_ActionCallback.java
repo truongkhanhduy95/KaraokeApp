@@ -7,7 +7,8 @@ public class RequestCreator_ActionCallback
 		mono.android.IGCUserPeer,
 		com.squareup.picasso.Callback
 {
-	static final String __md_methods;
+/** @hide */
+	public static final String __md_methods;
 	static {
 		__md_methods = 
 			"n_onError:()V:GetOnErrorHandler:Square.Picasso.ICallbackInvoker, Square.Picasso\n" +
@@ -40,7 +41,7 @@ public class RequestCreator_ActionCallback
 
 	private native void n_onSuccess ();
 
-	java.util.ArrayList refList;
+	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
 	{
 		if (refList == null)
