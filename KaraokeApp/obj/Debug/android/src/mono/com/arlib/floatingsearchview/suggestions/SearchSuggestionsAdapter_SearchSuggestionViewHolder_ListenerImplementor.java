@@ -7,7 +7,8 @@ public class SearchSuggestionsAdapter_SearchSuggestionViewHolder_ListenerImpleme
 		mono.android.IGCUserPeer,
 		com.arlib.floatingsearchview.suggestions.SearchSuggestionsAdapter.SearchSuggestionViewHolder.Listener
 {
-	static final String __md_methods;
+/** @hide */
+	public static final String __md_methods;
 	static {
 		__md_methods = 
 			"n_onItemClicked:(I)V:GetOnItemClicked_IHandler:FloatingSearchViews.Suggestions.SearchSuggestionsAdapter/SearchSuggestionViewHolder/IListenerInvoker, FloatingSearchView\n" +
@@ -40,7 +41,7 @@ public class SearchSuggestionsAdapter_SearchSuggestionViewHolder_ListenerImpleme
 
 	private native void n_onMoveItemToSearchClicked (int p0);
 
-	java.util.ArrayList refList;
+	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
 	{
 		if (refList == null)
