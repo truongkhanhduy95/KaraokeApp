@@ -82,6 +82,9 @@ namespace KaraokeApp
 		public string Link;
         protected Song song;
 
+		//MainViewmodel
+		//VM
+
         public SongViewHolder(View itemView)
             : base(itemView)
         {

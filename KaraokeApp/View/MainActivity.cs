@@ -9,6 +9,10 @@ using System.Collections.Generic;
 using Android.Content.PM;
 using System.Threading;
 using FloatingSearchViews;
+<<<<<<< Updated upstream
+using Android.Content;
+=======
+>>>>>>> Stashed changes
 
 namespace KaraokeApp
 {
@@ -25,6 +29,15 @@ namespace KaraokeApp
 		RecyclerView.LayoutManager layoutManager;
 		SongAdapter adapterSong;
 
+<<<<<<< Updated upstream
+		//Shared preferences
+		ISharedPreferences pref;
+		ISharedPreferencesEditor editor;
+		string searchHistory;
+		const int searchSuggestItem = 5;
+
+=======
+>>>>>>> Stashed changes
 		//search keyword
 		//default: anh cu di di
 		private string searchString = "anh+cu+di+di";
@@ -56,6 +69,7 @@ namespace KaraokeApp
 				RunOnUiThread(() => ShowListSong(listData));
 			})).Start();
 		}
+
 		private void ShowListSong(List<Song> listSong)
 		{
 			adapterSong = new SongAdapter(this, listSong);
@@ -71,6 +85,15 @@ namespace KaraokeApp
 			recycler = FindViewById<RecyclerView>(Resource.Id.recycler);
 			layoutManager = new LinearLayoutManager(this);
 			recycler.SetLayoutManager(layoutManager);
+<<<<<<< Updated upstream
+
+			pref = Application.Context.GetSharedPreferences("History", FileCreationMode.Private);
+			editor = pref.Edit();
+
+			//Get the history search
+			searchHistory = pref.GetString("search_string", "");
+=======
+>>>>>>> Stashed changes
 		}
 
 
@@ -80,7 +103,11 @@ namespace KaraokeApp
 			{
 				searchView.SetSearchHint("Search...");
 
+<<<<<<< Updated upstream
+				searchView.SwapSuggestions(SearchHelper.GetHistorySearch(searchSuggestItem));
+=======
 				//searchView.SwapSuggestions(SearchHistoryHelper.GetHistoryAsync(this, 3));
+>>>>>>> Stashed changes
 			};
 
 			searchView.QueryChange += (sender, e) =>
@@ -93,10 +120,31 @@ namespace KaraokeApp
 					searchString = e.OldQuery;
 			};
 
+<<<<<<< Updated upstream
+			searchView.SuggestionClicked += (sender, e) => 
+			{
+				var historySuggestion = (SearchSuggestion)e.SearchSuggestion;
+				searchString = historySuggestion.SongName;
+
+				LoadSongWithThread();
+			};
+
+=======
+>>>>>>> Stashed changes
 			searchView.FocusCleared += (sender, e) =>
 			{
 				if (searchString != "")
 				{
+<<<<<<< Updated upstream
+					//Shared Preferences
+					//remove search string if contains
+					searchHistory += searchString + ";";
+
+					editor.PutString("search_string", searchHistory);
+					editor.Commit();
+
+=======
+>>>>>>> Stashed changes
 					LoadSongWithThread();
 					searchView.SetSearchHint(searchString);
 				}
@@ -109,8 +157,11 @@ namespace KaraokeApp
 		/// </summary>
 		public override void OnBackPressed()
 		{
+<<<<<<< Updated upstream
+=======
 
 
+>>>>>>> Stashed changes
 			if (count_pressed == 0)
 			{
 				back_pressed = DateTime.Now;
