@@ -1,5 +1,9 @@
 /Users/truongkhanhduy/KaraokeApp-1/KaraokeApp/obj/Debug/MonoAndroid,Version=v7.0.AssemblyAttribute.cs
 /Users/truongkhanhduy/KaraokeApp-1/KaraokeApp/bin/Debug/KaraokeApp.dll.mdb
+<<<<<<< Updated upstream
+=======
+/Users/truongkhanhduy/KaraokeApp-1/KaraokeApp/bin/Debug/KaraokeApp.pdb
+>>>>>>> Stashed changes
 /Users/truongkhanhduy/KaraokeApp-1/KaraokeApp/bin/Debug/KaraokeApp.dll
 /Users/truongkhanhduy/KaraokeApp-1/KaraokeApp/bin/Debug/KaraokeApp.KaraokeApp.apk
 /Users/truongkhanhduy/KaraokeApp-1/KaraokeApp/obj/Debug/android/bin/KaraokeApp.KaraokeApp.apk
@@ -20,6 +24,10 @@
 /Users/truongkhanhduy/KaraokeApp-1/KaraokeApp/obj/Debug/uploadflags.txt
 /Users/truongkhanhduy/KaraokeApp-1/KaraokeApp/obj/Debug/KaraokeApp.dll
 /Users/truongkhanhduy/KaraokeApp-1/KaraokeApp/obj/Debug/KaraokeApp.dll.mdb
+<<<<<<< Updated upstream
+=======
+/Users/truongkhanhduy/KaraokeApp-1/KaraokeApp/obj/Debug/KaraokeApp.pdb
+>>>>>>> Stashed changes
 /Users/truongkhanhduy/KaraokeApp-1/KaraokeApp/bin/Debug/FloatingSearchView.dll
 /Users/truongkhanhduy/KaraokeApp-1/KaraokeApp/bin/Debug/GalaSoft.MvvmLight.dll
 /Users/truongkhanhduy/KaraokeApp-1/KaraokeApp/bin/Debug/GalaSoft.MvvmLight.Extras.dll

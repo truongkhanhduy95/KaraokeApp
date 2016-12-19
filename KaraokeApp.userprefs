@@ -1,6 +1,7 @@
 ﻿<Properties StartupConfiguration="{3F0BEE79-1F6C-47BD-93CC-D44742C8A581}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="KaraokeApp/View/MainActivity.cs">
     <Files>
+<<<<<<< Updated upstream
       <File FileName="KaraokeApp/View/MainActivity.cs" Line="92" Column="37" />
       <File FileName="KaraokeApp/Service/SongService.cs" Line="1" Column="1" />
       <File FileName="KaraokeApp/ViewModel/LoginViewModel.cs" Line="13" Column="49" />
@@ -12,6 +13,12 @@
       <File FileName="KaraokeApp/App.cs" Line="23" Column="6" />
       <File FileName="KaraokeApp/Helper/BitmapHelper.cs" Line="34" Column="1" />
       <File FileName="KaraokeApp/Model/Song.cs" Line="29" Column="10" />
+=======
+      <File FileName="KaraokeApp/View/MainActivity.cs" Line="83" Column="45" />
+      <File FileName="KaraokeApp/Service/SongService.cs" Line="1" Column="1" />
+      <File FileName="KaraokeApp/ViewModel/LoginViewModel.cs" Line="1" Column="1" />
+      <File FileName="KaraokeApp/ViewModel/MainViewModel.cs" Line="20" Column="10" />
+>>>>>>> Stashed changes
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -19,5 +26,9 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+<<<<<<< Updated upstream
   <MonoDevelop.Ide.ItemProperties.KaraokeApp AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.56.101:5555" />
+=======
+  <MonoDevelop.Ide.ItemProperties.KaraokeApp PreferredExecutionTarget="Android.192.168.56.101:5555" />
+>>>>>>> Stashed changes
 </Properties>
