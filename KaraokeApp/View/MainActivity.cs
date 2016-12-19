@@ -63,6 +63,7 @@ namespace KaraokeApp
 				RunOnUiThread(() => ShowListSong(listData));
 			})).Start();
 		}
+
 		private void ShowListSong(List<Song> listSong)
 		{
 			adapterSong = new SongAdapter(this, listSong);
