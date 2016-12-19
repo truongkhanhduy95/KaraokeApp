@@ -95,13 +95,9 @@ namespace KaraokeApp
 
             itemView.Click += (sender, e) =>
             {
-<<<<<<< HEAD
-               
-=======
 				song = new Song(Link, txtSongName.Text);
 				Vm.NavigateToDetail(song);
 				//Toast.MakeText(itemView.Context, Link + " clicked!", ToastLength.Short).Show();
->>>>>>> QuocNamIT1/master
             };
         }
 		private MainViewModel Vm = App.Locator.Main;
