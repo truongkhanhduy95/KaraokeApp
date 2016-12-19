@@ -11,7 +11,7 @@ using System.Threading;
 using FloatingSearchViews;
 
 using Android.Content;
-=======
+
 
 
 namespace KaraokeApp
@@ -36,7 +36,6 @@ namespace KaraokeApp
 		string searchHistory;
 		const int searchSuggestItem = 5;
 
-=======
 
 		//search keyword
 		//default: anh cu di di
@@ -92,7 +91,6 @@ namespace KaraokeApp
 
 			//Get the history search
 			searchHistory = pref.GetString("search_string", "");
-=======
 
 		}
 
@@ -105,7 +103,7 @@ namespace KaraokeApp
 
 
 				searchView.SwapSuggestions(SearchHelper.GetHistorySearch(searchSuggestItem));
-=======
+
 				//searchView.SwapSuggestions(SearchHistoryHelper.GetHistoryAsync(this, 3));
 
 			};
