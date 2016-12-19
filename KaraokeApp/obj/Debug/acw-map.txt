@@ -6,10 +6,10 @@ KaraokeApp.SongViewHolder, KaraokeApp;md54c5d0fb24598bad118a32eba41eb953b.SongVi
 KaraokeApp.SongViewHolder, KaraokeApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md54c5d0fb24598bad118a32eba41eb953b.SongViewHolder
 KaraokeApp.SongViewHolder;md54c5d0fb24598bad118a32eba41eb953b.SongViewHolder
 karaokeapp.SongViewHolder;md54c5d0fb24598bad118a32eba41eb953b.SongViewHolder
-KaraokeApp.DetailActivity, KaraokeApp;md54c5d0fb24598bad118a32eba41eb953b.DetailActivity
-KaraokeApp.DetailActivity, KaraokeApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md54c5d0fb24598bad118a32eba41eb953b.DetailActivity
-KaraokeApp.DetailActivity;md54c5d0fb24598bad118a32eba41eb953b.DetailActivity
-karaokeapp.DetailActivity;md54c5d0fb24598bad118a32eba41eb953b.DetailActivity
+KaraokeApp.DetailsActivity, KaraokeApp;md54c5d0fb24598bad118a32eba41eb953b.DetailsActivity
+KaraokeApp.DetailsActivity, KaraokeApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md54c5d0fb24598bad118a32eba41eb953b.DetailsActivity
+KaraokeApp.DetailsActivity;md54c5d0fb24598bad118a32eba41eb953b.DetailsActivity
+karaokeapp.DetailsActivity;md54c5d0fb24598bad118a32eba41eb953b.DetailsActivity
 KaraokeApp.LoginActivity, KaraokeApp;md54c5d0fb24598bad118a32eba41eb953b.LoginActivity
 KaraokeApp.LoginActivity, KaraokeApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md54c5d0fb24598bad118a32eba41eb953b.LoginActivity
 KaraokeApp.LoginActivity;md54c5d0fb24598bad118a32eba41eb953b.LoginActivity
