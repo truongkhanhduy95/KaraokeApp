@@ -7,7 +7,8 @@ public class FloatingSearchView_OnFocusChangeListenerImplementor
 		mono.android.IGCUserPeer,
 		com.arlib.floatingsearchview.FloatingSearchView.OnFocusChangeListener
 {
-	static final String __md_methods;
+/** @hide */
+	public static final String __md_methods;
 	static {
 		__md_methods = 
 			"n_onFocus:()V:GetOnFocusHandler:FloatingSearchViews.FloatingSearchView/IOnFocusChangeListenerInvoker, FloatingSearchView\n" +
@@ -40,7 +41,7 @@ public class FloatingSearchView_OnFocusChangeListenerImplementor
 
 	private native void n_onFocusCleared ();
 
-	java.util.ArrayList refList;
+	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
 	{
 		if (refList == null)

@@ -41,7 +41,7 @@ namespace KaraokeApp
             SongViewHolder songHolder = holder as SongViewHolder;
 
             songHolder.txtSongName.Text = list[position].Name;
-            songHolder.txtSinger.Text = "Chi dân";
+            songHolder.txtSinger.Text = "Chi dan";
             Animation fadeInAnimation = AnimationUtils.LoadAnimation(_activity, Resource.Animation.fade);
             songHolder.imgSong.StartAnimation(fadeInAnimation);
             
@@ -78,6 +78,9 @@ namespace KaraokeApp
         public TextView txtSongName, txtSinger, txtDuration;
         protected Song song;
 
+		//MainViewmodel
+		//VM
+
         public SongViewHolder(View itemView)
             : base(itemView)
         {
@@ -90,7 +93,7 @@ namespace KaraokeApp
 
             itemView.Click += (sender, e) =>
             {
-                Toast.MakeText(itemView.Context, txtSongName.Text + " clicked!", ToastLength.Short).Show();
+               
             };
         }
 

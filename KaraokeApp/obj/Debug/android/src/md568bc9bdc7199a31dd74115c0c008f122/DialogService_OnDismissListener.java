@@ -7,7 +7,8 @@ public class DialogService_OnDismissListener
 		mono.android.IGCUserPeer,
 		android.content.DialogInterface.OnDismissListener
 {
-	static final String __md_methods;
+/** @hide */
+	public static final String __md_methods;
 	static {
 		__md_methods = 
 			"n_onDismiss:(Landroid/content/DialogInterface;)V:GetOnDismiss_Landroid_content_DialogInterface_Handler:Android.Content.IDialogInterfaceOnDismissListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
@@ -31,7 +32,7 @@ public class DialogService_OnDismissListener
 
 	private native void n_onDismiss (android.content.DialogInterface p0);
 
-	java.util.ArrayList refList;
+	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
 	{
 		if (refList == null)

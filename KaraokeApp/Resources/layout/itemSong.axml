@@ -17,7 +17,8 @@
         <ImageView
             android:id="@+id/imgPicture"
             android:layout_width="150dp"
-            android:layout_height="150dp" />
+            android:layout_height="110dp"
+            android:src="@drawable/girla" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -28,15 +29,16 @@
                 android:layout_height="wrap_content"
                 android:text="Name of song"
                 android:layout_margin="5dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="12dp"
                 android:textColor="@android:color/black"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
+                android:layout_marginTop="3dp"
                 android:text="Singer"
-                android:textSize="15sp"
+                android:textSize="10sp"
                 android:textColor="@android:color/black"
                 android:id="@+id/txtSinger" />
             <TextView
@@ -44,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:text="1:23:42"
                 android:padding="5dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginBottom="5dp"
                 android:layout_marginLeft="5dp"
                 android:background="@drawable/text_round"
                 android:textColor="@android:color/white"
