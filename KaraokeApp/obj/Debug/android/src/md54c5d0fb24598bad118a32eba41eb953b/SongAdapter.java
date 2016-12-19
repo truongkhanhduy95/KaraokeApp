@@ -24,6 +24,13 @@ public class SongAdapter
 			mono.android.TypeManager.Activate ("KaraokeApp.SongAdapter, KaraokeApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
+	public SongAdapter (android.app.Activity p0) throws java.lang.Throwable
+	{
+		super ();
+		if (getClass () == SongAdapter.class)
+			mono.android.TypeManager.Activate ("KaraokeApp.SongAdapter, KaraokeApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "Android.App.Activity, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065", this, new java.lang.Object[] { p0 });
+	}
+
 
 	public int getItemCount ()
 	{

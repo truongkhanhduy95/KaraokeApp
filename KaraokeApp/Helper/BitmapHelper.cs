@@ -42,7 +42,7 @@ namespace KaraokeApp.Helper
         }
         public static  void LoadImage(Activity activity,string url, ImageView imageView)
         {
-            int cacheSize = 8 * 1024 * 1024;
+            int cacheSize = 1 * 1024 * 1024;
             m_memoryCache = new LruCache(cacheSize);
             new Thread(new ThreadStart(() =>
             {

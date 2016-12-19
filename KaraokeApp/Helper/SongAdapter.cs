@@ -21,11 +21,19 @@ namespace KaraokeApp
 {
     public class SongAdapter : RecyclerView.Adapter
     {
-        List<Song> list;
-        Activity _activity;
-        public SongAdapter(Activity activity, List<Song> list)
+        List<Song> listSong;
+
+        public List<Song> ListSong
         {
-            this.list = list;
+            get { return listSong; }
+            set { listSong = value; }
+        }
+        Activity _activity;
+
+
+        public SongAdapter(Activity activity)
+        {
+           
             this._activity = activity;
         }
 
@@ -33,23 +41,24 @@ namespace KaraokeApp
         {
             get
             {
-                return list.Count;
+                return listSong==null?0:listSong.Count;
             }
         }
-
+      
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
             SongViewHolder songHolder = holder as SongViewHolder;
 
-			songHolder.txtSongName.Text = list[position].Name;
+			songHolder.txtSongName.Text = listSong[position].Name;
             songHolder.txtSinger.Text = "Chi dan";
-			songHolder.Link = list[position].Link;
+			songHolder.Link = listSong[position].Link;
 
             Animation fadeInAnimation = AnimationUtils.LoadAnimation(_activity, Resource.Animation.fade);
+            
             songHolder.imgSong.StartAnimation(fadeInAnimation);
             
-            //Picasso.With(_activity).Load(list[position].Image).Into(songHolder.imgSong);
-            BitmapHelper.LoadImage(_activity,list[position].Image, songHolder.imgSong);
+            //Picasso.With(_activity).Load(listSong[position].Image).Into(songHolder.imgSong);
+            BitmapHelper.LoadImage(_activity,listSong[position].Image, songHolder.imgSong);
         }
         private Bitmap GetImageBitmapFromUrl(string url)
         {

@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Views;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace KaraokeApp.ViewModel
 {
@@ -11,6 +13,17 @@ namespace KaraokeApp.ViewModel
 
         //song service
         private ISongService songService;
+
+        private List<Song> _listData;
+
+        public List<Song> ListData
+        {
+            get { return _listData??(_listData=new List<Song>()); }
+            set { 
+                _listData = value;
+            RaisePropertyChanged();
+            }
+        }
 
 
         public MainViewModel(INavigationService navigationService)
@@ -32,9 +45,11 @@ namespace KaraokeApp.ViewModel
         /// Get list songs form API
         /// </summary>
         /// <returns>The songs.</returns>
-        public List<Song> GetSongs(string keyword)
+        public void GetSongs(string keyword)
         {
-            return songService.GetSongs(keyword);
+            Task.Run(() => ListData = songService.GetSongs(keyword));
+            //Task.Factory.StartNew(() => ListData = songService.GetSongs(keyword));
+         
         }
     }
 }
