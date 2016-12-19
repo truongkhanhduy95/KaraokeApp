@@ -13,27 +13,35 @@ using Android.Widget;
 namespace KaraokeApp
 {
     public class Song
-    {
-        public string Name
-        {
-            get;
-            set;
-        }
-       
-        public string Link
-        {
-            get;
-            set;
-        }
-        public string Image
-        {
-            get;
-            set;
-        }
-        public Song()
-        {
-        }
+	{
+		public string Link
+		{
+			get;
+			set;
+		}
 
-        
-    }
+		public string Name
+		{
+			get;
+			set;
+		}
+
+		public string Image
+		{
+			get;
+			set;
+		}
+
+		public Song()
+		{
+		}
+
+		public Song(string link, string name)
+		{
+			this.Link = link;
+			this.Name = name;
+			//this.Image = image;
+		}
+
+	}
 }

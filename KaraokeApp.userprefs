@@ -1,4 +1,5 @@
 ﻿<Properties StartupConfiguration="{3F0BEE79-1F6C-47BD-93CC-D44742C8A581}|Default">
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="../../../Library/Frameworks/Xamarin.Android.framework/Versions/7.0.2-37/lib/xbuild/Xamarin/Android/Xamarin.Android.Common.targets">
     <Files>
       <File FileName="KaraokeApp/View/MainActivity.cs" Line="108" Column="6" />
@@ -15,10 +16,18 @@
       <File FileName="../../../Library/Frameworks/Xamarin.Android.framework/Versions/7.0.2-37/lib/xbuild/Xamarin/Android/Xamarin.Android.Common.targets" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
+=======
+>>>>>>> QuocNamIT1/master
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+<<<<<<< HEAD
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.KaraokeApp PreferredExecutionTarget="Android.192.168.56.101:5555" />
+=======
+  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.ItemProperties.KaraokeApp AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.244.101:5555" />
+>>>>>>> QuocNamIT1/master
 </Properties>

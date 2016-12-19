@@ -15,6 +15,7 @@ using System.Net;
 using Square.Picasso;
 using KaraokeApp.Helper;
 using Android.Views.Animations;
+using KaraokeApp.ViewModel;
 
 namespace KaraokeApp
 {
@@ -40,8 +41,10 @@ namespace KaraokeApp
         {
             SongViewHolder songHolder = holder as SongViewHolder;
 
-            songHolder.txtSongName.Text = list[position].Name;
+			songHolder.txtSongName.Text = list[position].Name;
             songHolder.txtSinger.Text = "Chi dan";
+			songHolder.Link = list[position].Link;
+
             Animation fadeInAnimation = AnimationUtils.LoadAnimation(_activity, Resource.Animation.fade);
             songHolder.imgSong.StartAnimation(fadeInAnimation);
             
@@ -76,6 +79,7 @@ namespace KaraokeApp
     {
         public ImageView imgSong;
         public TextView txtSongName, txtSinger, txtDuration;
+		public string Link;
         protected Song song;
 
 		//MainViewmodel
@@ -89,14 +93,17 @@ namespace KaraokeApp
             txtSinger = itemView.FindViewById<TextView>(Resource.Id.txtSinger);
             txtDuration = itemView.FindViewById<TextView>(Resource.Id.txtDuration);
 
-            //song=new Song(txtSongName.Text,
-
             itemView.Click += (sender, e) =>
             {
+<<<<<<< HEAD
                
+=======
+				song = new Song(Link, txtSongName.Text);
+				Vm.NavigateToDetail(song);
+				//Toast.MakeText(itemView.Context, Link + " clicked!", ToastLength.Short).Show();
+>>>>>>> QuocNamIT1/master
             };
         }
-
+		private MainViewModel Vm = App.Locator.Main;
     }
-
 }
