@@ -32,7 +32,7 @@ namespace KaraokeApp
 
 		private void FindControl()
 		{
-			_txvName = FindViewById<TextView>(Resource.Id.txvSinger);
+			_txvName = FindViewById<TextView>(Resource.Id.txvName);
 			_txvSinger = FindViewById<TextView>(Resource.Id.txvSinger);
 			_txvDescription = FindViewById<TextView>(Resource.Id.txvDesciption);
 
@@ -40,6 +40,9 @@ namespace KaraokeApp
 			// Config WebView
 			WebSettings settings = _wvVideo.Settings;
 			settings.JavaScriptEnabled = true;
+
+			_wvVideo.Settings.LoadWithOverviewMode = true;
+			_wvVideo.Settings.UseWideViewPort = true;
 			_wvVideo.SetWebChromeClient(new WebChromeClient());
 
 			bool result = GetDataFromMain();
@@ -51,11 +54,11 @@ namespace KaraokeApp
 		{
 			NavigationService nav = (NavigationService)ServiceLocator.Current.GetInstance<INavigationService>();
 			var song = nav.GetAndRemoveParameter<Song>(Intent);
+
 			if (song != null)
 			{
 				_txvName.Text = song.Name;
-				_txvSinger.Text = song.Singer;
-				_txvDescription.Text = song.Description;
+				//TODO Singer and Description
 				LoadVideo(song.Link);
 				return true;
 			}
@@ -64,7 +67,10 @@ namespace KaraokeApp
 
 		private void LoadVideo(string url)
 		{
+			url = Vm.ProcessLink(url);	
 			_wvVideo.LoadUrl("https://www.youtube.com/embed/" + url);
 		}
+
+		DetailViewModel Vm = App.Locator.Detai;
 	}
 }

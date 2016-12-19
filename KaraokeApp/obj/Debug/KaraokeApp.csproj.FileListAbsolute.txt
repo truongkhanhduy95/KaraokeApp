@@ -130,4 +130,3 @@ D:\Github\KaraokeApp\obj\Debug\android\assets\System.ServiceModel.Internals.dll.
 D:\Github\KaraokeApp\obj\Debug\android\assets\System.Xml.dll.mdb
 D:\Github\KaraokeApp\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 D:\Github\KaraokeApp\obj\Debug\KaraokeApp.dll.mdb
-D:\Github\KaraokeApp\bin\Debug\KaraokeApp.dll.mdb

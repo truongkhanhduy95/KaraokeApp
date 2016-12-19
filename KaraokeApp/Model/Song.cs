@@ -32,28 +32,16 @@ namespace KaraokeApp
 			set;
 		}
 
-		public string Singer
-		{
-			get;
-			set;
-		}
-
-		public string Description
-		{
-			get;
-			set;
-		}
-
 		public Song()
 		{
 		}
 
-		public Song(string link, string name, string singer, string description)
+		public Song(string link, string name)
 		{
 			this.Link = link;
 			this.Name = name;
-			this.Singer = singer;
-			this.Description = description;
+			//this.Image = image;
 		}
+
 	}
 }
