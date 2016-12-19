@@ -19,10 +19,10 @@ namespace KaraokeApp
 			string[] listSearch = searchHistory.Split(';');
 
 			var suggestionList = new List<ISearchSuggestion>();
-			for (int i = listSearch.Length-2; i > listSearch.Length-2-count; i--)
-			{
-				suggestionList.Add(new SearchSuggestion(listSearch[i]));
-			}
+            //for (int i = listSearch.Length-2; i > listSearch.Length-2-count; i--)
+            //{
+            //    suggestionList.Add(new SearchSuggestion(listSearch[i]));
+            //}
 			return suggestionList;
 		}
 

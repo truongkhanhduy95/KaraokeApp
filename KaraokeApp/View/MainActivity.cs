@@ -11,6 +11,7 @@ using System.Threading;
 using FloatingSearchViews;
 
 using Android.Content;
+using Android.Views;
 
 
 
@@ -26,6 +27,7 @@ namespace KaraokeApp
 		FloatingSearchView searchView;
 		RecyclerView recycler;
 		List<Song> listData;
+        ProgressBar progressBarLoading;
 		RecyclerView.LayoutManager layoutManager;
 		SongAdapter adapterSong;
 
@@ -57,11 +59,20 @@ namespace KaraokeApp
 			LoadSongWithThread();
 			AddEvents();
 		}
+        void DisplayLoading()
+        {
+            progressBarLoading.Visibility = ViewStates.Visible;
+        }
+        void HideLoading()
+        {
+            progressBarLoading.Visibility = ViewStates.Gone;
+        }
 		private void LoadSongWithThread()
 		{
-
+            DisplayLoading();
 			new Thread(new ThreadStart(() =>
 			{
+              
 				listData = new List<Song>();
 				listData = Vm.GetSongs(searchString);
 
@@ -73,7 +84,7 @@ namespace KaraokeApp
 		{
 			adapterSong = new SongAdapter(this, listSong);
 			recycler.SetAdapter(adapterSong);
-
+            HideLoading();
 			//reset search
 			searchString = "";
 		}
@@ -82,6 +93,7 @@ namespace KaraokeApp
 		{
 			searchView = FindViewById<FloatingSearchView>(Resource.Id.floating_search_view);
 			recycler = FindViewById<RecyclerView>(Resource.Id.recycler);
+            progressBarLoading = FindViewById<ProgressBar>(Resource.Id.loading);
 			layoutManager = new LinearLayoutManager(this);
 			recycler.SetLayoutManager(layoutManager);
 

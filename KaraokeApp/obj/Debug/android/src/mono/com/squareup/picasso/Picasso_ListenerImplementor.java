@@ -7,8 +7,7 @@ public class Picasso_ListenerImplementor
 		mono.android.IGCUserPeer,
 		com.squareup.picasso.Picasso.Listener
 {
-/** @hide */
-	public static final String __md_methods;
+	static final String __md_methods;
 	static {
 		__md_methods = 
 			"n_onImageLoadFailed:(Lcom/squareup/picasso/Picasso;Landroid/net/Uri;Ljava/lang/Exception;)V:GetOnImageLoadFailed_Lcom_squareup_picasso_Picasso_Landroid_net_Uri_Ljava_lang_Exception_Handler:Square.Picasso.Picasso/IListenerInvoker, Square.Picasso\n" +
@@ -32,7 +31,7 @@ public class Picasso_ListenerImplementor
 
 	private native void n_onImageLoadFailed (com.squareup.picasso.Picasso p0, android.net.Uri p1, java.lang.Exception p2);
 
-	private java.util.ArrayList refList;
+	java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
 	{
 		if (refList == null)

@@ -48,8 +48,6 @@ C:\Users\Nam\Desktop\KaraokeApp\KaraokeApp\KaraokeApp\obj\Debug\R.cs.flag
 C:\Users\Nam\Desktop\KaraokeApp\KaraokeApp\KaraokeApp\obj\Debug\uploadflags.txt
 C:\Users\Nam\Desktop\KaraokeApp\KaraokeApp\KaraokeApp\obj\Debug\KaraokeApp.csprojResolveAssemblyReference.cache
 C:\Users\Nam\Desktop\KaraokeApp\KaraokeApp\KaraokeApp\obj\Debug\res\anim\fade.xml
-C:\Users\Nam\Desktop\KaraokeApp\KaraokeApp\KaraokeApp\obj\Debug\KaraokeApp.dll.mdb
-C:\Users\Nam\Desktop\KaraokeApp\KaraokeApp\KaraokeApp\bin\Debug\KaraokeApp.dll.mdb
 D:\Github\KaraokeApp\obj\Debug\KaraokeApp.csprojResolveAssemblyReference.cache
 D:\Github\KaraokeApp\bin\Debug\KaraokeApp.dll
 D:\Github\KaraokeApp\bin\Debug\KaraokeApp.pdb
@@ -130,3 +128,6 @@ D:\Github\KaraokeApp\obj\Debug\android\assets\System.ServiceModel.Internals.dll.
 D:\Github\KaraokeApp\obj\Debug\android\assets\System.Xml.dll.mdb
 D:\Github\KaraokeApp\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 D:\Github\KaraokeApp\obj\Debug\KaraokeApp.dll.mdb
+C:\Users\Nam\Desktop\KaraokeApp\KaraokeApp\KaraokeApp\obj\Debug\res\layout\detail.xml
+C:\Users\Nam\Desktop\KaraokeApp\KaraokeApp\KaraokeApp\obj\Debug\KaraokeApp.dll.mdb
+C:\Users\Nam\Desktop\KaraokeApp\KaraokeApp\KaraokeApp\bin\Debug\KaraokeApp.dll.mdb

@@ -7,8 +7,7 @@ public class FloatingSearchView_OnSearchListenerImplementor
 		mono.android.IGCUserPeer,
 		com.arlib.floatingsearchview.FloatingSearchView.OnSearchListener
 {
-/** @hide */
-	public static final String __md_methods;
+	static final String __md_methods;
 	static {
 		__md_methods = 
 			"n_onSearchAction:()V:GetOnSearchActionHandler:FloatingSearchViews.FloatingSearchView/IOnSearchListenerInvoker, FloatingSearchView\n" +
@@ -41,7 +40,7 @@ public class FloatingSearchView_OnSearchListenerImplementor
 
 	private native void n_onSuggestionClicked (com.arlib.floatingsearchview.suggestions.model.SearchSuggestion p0);
 
-	private java.util.ArrayList refList;
+	java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
 	{
 		if (refList == null)

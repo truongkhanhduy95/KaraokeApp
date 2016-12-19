@@ -16,7 +16,7 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <NuGetPackageImportStamp>0d3c8834</NuGetPackageImportStamp>
   </PropertyGroup>
@@ -117,7 +117,6 @@
     <Compile Include="View\RegisterActivity.cs" />
     <Compile Include="Model\SearchSuggestion.cs" />
     <Compile Include="Helper\SearchHelper.cs" />
-    <Compile Include="Helper\SearchSuggestion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />

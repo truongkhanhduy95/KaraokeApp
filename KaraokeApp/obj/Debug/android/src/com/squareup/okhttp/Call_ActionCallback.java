@@ -7,8 +7,7 @@ public class Call_ActionCallback
 		mono.android.IGCUserPeer,
 		com.squareup.okhttp.Callback
 {
-/** @hide */
-	public static final String __md_methods;
+	static final String __md_methods;
 	static {
 		__md_methods = 
 			"n_onFailure:(Lcom/squareup/okhttp/Request;Ljava/io/IOException;)V:GetOnFailure_Lcom_squareup_okhttp_Request_Ljava_io_IOException_Handler:Square.OkHttp.ICallbackInvoker, Square.OkHttp\n" +
@@ -41,7 +40,7 @@ public class Call_ActionCallback
 
 	private native void n_onResponse (com.squareup.okhttp.Response p0);
 
-	private java.util.ArrayList refList;
+	java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
 	{
 		if (refList == null)
