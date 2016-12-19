@@ -78,6 +78,9 @@ namespace KaraokeApp
         public TextView txtSongName, txtSinger, txtDuration;
         protected Song song;
 
+		//MainViewmodel
+		//VM
+
         public SongViewHolder(View itemView)
             : base(itemView)
         {
@@ -90,7 +93,7 @@ namespace KaraokeApp
 
             itemView.Click += (sender, e) =>
             {
-                Toast.MakeText(itemView.Context, txtSongName.Text + " clicked!", ToastLength.Short).Show();
+               
             };
         }
 

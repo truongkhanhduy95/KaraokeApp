@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using Android.Content.PM;
 using System.Threading;
 using FloatingSearchViews;
+using Android.Content;
 
 namespace KaraokeApp
 {
@@ -24,6 +25,12 @@ namespace KaraokeApp
 		List<Song> listData;
 		RecyclerView.LayoutManager layoutManager;
 		SongAdapter adapterSong;
+
+		//Shared preferences
+		ISharedPreferences pref;
+		ISharedPreferencesEditor editor;
+		string searchHistory;
+		const int searchSuggestItem = 5;
 
 		//search keyword
 		//default: anh cu di di
@@ -71,6 +78,12 @@ namespace KaraokeApp
 			recycler = FindViewById<RecyclerView>(Resource.Id.recycler);
 			layoutManager = new LinearLayoutManager(this);
 			recycler.SetLayoutManager(layoutManager);
+
+			pref = Application.Context.GetSharedPreferences("History", FileCreationMode.Private);
+			editor = pref.Edit();
+
+			//Get the history search
+			searchHistory = pref.GetString("search_string", "");
 		}
 
 
@@ -80,7 +93,7 @@ namespace KaraokeApp
 			{
 				searchView.SetSearchHint("Search...");
 
-				//searchView.SwapSuggestions(SearchHistoryHelper.GetHistoryAsync(this, 3));
+				searchView.SwapSuggestions(SearchHelper.GetHistorySearch(searchSuggestItem));
 			};
 
 			searchView.QueryChange += (sender, e) =>
@@ -93,10 +106,25 @@ namespace KaraokeApp
 					searchString = e.OldQuery;
 			};
 
+			searchView.SuggestionClicked += (sender, e) => 
+			{
+				var historySuggestion = (SearchSuggestion)e.SearchSuggestion;
+				searchString = historySuggestion.SongName;
+
+				LoadSongWithThread();
+			};
+
 			searchView.FocusCleared += (sender, e) =>
 			{
 				if (searchString != "")
 				{
+					//Shared Preferences
+					//remove search string if contains
+					searchHistory += searchString + ";";
+
+					editor.PutString("search_string", searchHistory);
+					editor.Commit();
+
 					LoadSongWithThread();
 					searchView.SetSearchHint(searchString);
 				}
@@ -109,8 +137,6 @@ namespace KaraokeApp
 		/// </summary>
 		public override void OnBackPressed()
 		{
-
-
 			if (count_pressed == 0)
 			{
 				back_pressed = DateTime.Now;

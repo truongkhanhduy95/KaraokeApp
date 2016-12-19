@@ -1,35 +1,18 @@
 ﻿<Properties StartupConfiguration="{3F0BEE79-1F6C-47BD-93CC-D44742C8A581}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="KaraokeApp/View/MainActivity.cs">
     <Files>
-      <File FileName="KaraokeApp/View/MainActivity.cs" Line="83" Column="46" />
-      <File FileName="KaraokeApp/Service/SongService.cs" Line="17" Column="29" />
-      <File FileName="KaraokeApp/ViewModel/LoginViewModel.cs" Line="1" Column="1" />
-      <File FileName="KaraokeApp/ViewModel/MainViewModel.cs" Line="20" Column="10" />
+      <File FileName="KaraokeApp/View/MainActivity.cs" Line="92" Column="37" />
+      <File FileName="KaraokeApp/Service/SongService.cs" Line="1" Column="1" />
+      <File FileName="KaraokeApp/ViewModel/LoginViewModel.cs" Line="13" Column="49" />
+      <File FileName="KaraokeApp/ViewModel/MainViewModel.cs" Line="27" Column="9" />
+      <File FileName="KaraokeApp/Model/SearchSuggestion.cs" Line="33" Column="1" />
+      <File FileName="KaraokeApp/Helper/SearchHelper.cs" Line="26" Column="26" />
+      <File FileName="KaraokeApp/Helper/SongAdapter.cs" Line="36" Column="1" />
+      <File FileName="KaraokeApp/ViewModel/ViewModelLocator.cs" Line="47" Column="24" />
+      <File FileName="KaraokeApp/App.cs" Line="23" Column="6" />
+      <File FileName="KaraokeApp/Helper/BitmapHelper.cs" Line="34" Column="1" />
+      <File FileName="KaraokeApp/Model/Song.cs" Line="29" Column="10" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="KaraokeApp" expanded="True">
-            <Node name="KaraokeApp" expanded="True">
-              <Node name="Assets" expanded="True" />
-              <Node name="Helper" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="Resources" expanded="True">
-                <Node name="layout" expanded="True">
-                  <Node name="itemSong.axml" selected="True" />
-                </Node>
-              </Node>
-              <Node name="Service" expanded="True" />
-              <Node name="View" expanded="True" />
-              <Node name="ViewModel" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
