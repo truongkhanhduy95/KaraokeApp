@@ -24,7 +24,7 @@ namespace KaraokeApp
                     nav.Configure(ViewModelLocator.MainPageKey, typeof(MainActivity));
                     nav.Configure(ViewModelLocator.LoginPageKey, typeof(LoginActivity));
                     nav.Configure(ViewModelLocator.RegisterPageKey, typeof(RegisterActivity));
-                    nav.Configure(ViewModelLocator.DetailPageKey, typeof(DetailActivity));
+					nav.Configure(ViewModelLocator.DetailPageKey, typeof(DetailsActivity));
 
                     locator = new ViewModelLocator();
                 }
