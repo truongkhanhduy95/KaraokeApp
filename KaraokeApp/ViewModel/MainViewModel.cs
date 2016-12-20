@@ -45,9 +45,9 @@ namespace KaraokeApp.ViewModel
         /// Get list songs form API
         /// </summary>
         /// <returns>The songs.</returns>
-        public void GetSongs(string keyword)
+        public void GetSongs(string keyword,int itemCount)
         {
-            Task.Run(() => ListData = songService.GetSongs(keyword));
+			Task.Run(() => ListData = songService.GetSongs(keyword,itemCount));
             //Task.Factory.StartNew(() => ListData = songService.GetSongs(keyword));
          
         }

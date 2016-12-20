@@ -91,5 +91,12 @@ namespace KaraokeApp
 			listSong.RemoveAll(song => song.Link.StartsWith("h"));
 			return listSong;
 		}
+
+		public List<Song> GetSongs(string keyword, int itemCount)
+		{
+			List<Song> songs = this.GetSongs(keyword);
+			songs.RemoveRange(itemCount, songs.Count - itemCount);
+			return songs;
+		}
 	}
 }

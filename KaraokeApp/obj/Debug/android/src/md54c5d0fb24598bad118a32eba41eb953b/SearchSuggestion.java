@@ -8,7 +8,8 @@ public class SearchSuggestion
 		com.arlib.floatingsearchview.suggestions.model.SearchSuggestion,
 		android.os.Parcelable
 {
-	static final String __md_methods;
+/** @hide */
+	public static final String __md_methods;
 	static {
 		__md_methods = 
 			"n_getBody:()Ljava/lang/String;:GetGetBodyHandler:FloatingSearchViews.Suggestions.Models.ISearchSuggestionInvoker, FloatingSearchView\n" +
@@ -84,7 +85,7 @@ public class SearchSuggestion
 
 	private native void n_writeToParcel (android.os.Parcel p0, int p1);
 
-	java.util.ArrayList refList;
+	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
 	{
 		if (refList == null)

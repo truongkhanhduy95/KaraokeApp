@@ -4,7 +4,7 @@
   <uses-sdk android:minSdkVersion="16" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-  <application android:label="KaraokeApp" android:name="mono.android.app.Application" android:allowBackup="true" android:debuggable="true">
+  <application android:label="KaraokeApp" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
     <activity android:label="DetailActivity" android:name="md54c5d0fb24598bad118a32eba41eb953b.DetailsActivity" />
     <activity android:configChanges="orientation|screenSize" android:label="LoginActivity" android:theme="@style/Theme.Splash" android:name="md54c5d0fb24598bad118a32eba41eb953b.LoginActivity">
       <intent-filter>

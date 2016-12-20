@@ -7,7 +7,8 @@ public class SearchSuggestion_ColorSuggestionCreator
 		mono.android.IGCUserPeer,
 		android.os.Parcelable.Creator
 {
-	static final String __md_methods;
+/** @hide */
+	public static final String __md_methods;
 	static {
 		__md_methods = 
 			"n_createFromParcel:(Landroid/os/Parcel;)Ljava/lang/Object;:GetCreateFromParcel_Landroid_os_Parcel_Handler:Android.OS.IParcelableCreatorInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
@@ -40,7 +41,7 @@ public class SearchSuggestion_ColorSuggestionCreator
 
 	private native java.lang.Object[] n_newArray (int p0);
 
-	java.util.ArrayList refList;
+	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
 	{
 		if (refList == null)

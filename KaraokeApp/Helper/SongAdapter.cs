@@ -53,12 +53,11 @@ namespace KaraokeApp
             songHolder.txtSinger.Text = "Chi dan";
 			songHolder.Link = listSong[position].Link;
 
-            Animation fadeInAnimation = AnimationUtils.LoadAnimation(_activity, Resource.Animation.fade);
+            //Animation fadeInAnimation = AnimationUtils.LoadAnimation(_activity, Resource.Animation.fade);
+           	//songHolder.imgSong.StartAnimation(fadeInAnimation);
             
-            songHolder.imgSong.StartAnimation(fadeInAnimation);
-            
-            //Picasso.With(_activity).Load(listSong[position].Image).Into(songHolder.imgSong);
-            BitmapHelper.LoadImage(_activity,listSong[position].Image, songHolder.imgSong);
+            Picasso.With(_activity).Load(listSong[position].Image).Into(songHolder.imgSong);
+            //BitmapHelper.LoadImage(_activity,listSong[position].Image, songHolder.imgSong);
         }
         private Bitmap GetImageBitmapFromUrl(string url)
         {

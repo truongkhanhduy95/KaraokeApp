@@ -15,14 +15,21 @@ namespace KaraokeApp
 		public static List<ISearchSuggestion> GetHistorySearch(int count)
 		{
 			var pref = Application.Context.GetSharedPreferences("History", Android.Content.FileCreationMode.Private);
+
 			string searchHistory = pref.GetString("search_string", "");
 			string[] listSearch = searchHistory.Split(';');
 
 			var suggestionList = new List<ISearchSuggestion>();
-            //for (int i = listSearch.Length-2; i > listSearch.Length-2-count; i--)
-            //{
-            //    suggestionList.Add(new SearchSuggestion(listSearch[i]));
-            //}
+
+			// handle if listSearch.Lengh < count
+			// if [i] negative
+			int end = listSearch.Length - 2 < 0 ? 0 : listSearch.Length - 2;
+			int to  = end - count < 0 ? 0 : end - count;
+
+			for (int i = end ; i >= to ; i--)
+            {
+                suggestionList.Add(new SearchSuggestion(listSearch[i]));
+            }
 			return suggestionList;
 		}
 

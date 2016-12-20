@@ -28,7 +28,7 @@ namespace KaraokeApp
         //Controls
         FloatingSearchView searchView;
         RecyclerView recycler;
-        List<Song> listData;
+        //List<Song> listData;
         ProgressBar progressBarLoading;
         RecyclerView.LayoutManager layoutManager;
         SongAdapter adapterSong;
@@ -38,7 +38,7 @@ namespace KaraokeApp
         ISharedPreferences pref;
         ISharedPreferencesEditor editor;
         string searchHistory;
-        const int searchSuggestItem = 5;
+        const int searchSuggestItem = 3;
 
 
         //Binding listSong
@@ -69,6 +69,7 @@ namespace KaraokeApp
         //search keyword
         //default: anh cu di di
         private string searchString = "anh+cu+di+di";
+		private int itemCount = 7;
 
         //back twice in 2seconds
         private const int TIME_DELAY = 2000;
@@ -92,9 +93,7 @@ namespace KaraokeApp
             //        //....
             //    });
             adapterSong = new SongAdapter(this);
-            LoadSongWithThread("anh+cu+di+di");
-            
-           
+            LoadSongWithThread(searchString,itemCount);
             
             recycler.SetAdapter(adapterSong);
           
@@ -109,11 +108,10 @@ namespace KaraokeApp
         {
             progressBarLoading.Visibility = ViewStates.Gone;
         }
-        private  void LoadSongWithThread(string keyword)
+        private  void LoadSongWithThread(string keyword,int count)
         {
             DisplayLoading();
-             Vm.GetSongs(keyword);
-
+			Vm.GetSongs(keyword,count);
         }
 
         private void ShowListSong()
@@ -139,22 +137,37 @@ namespace KaraokeApp
 
             //Get the history search
             searchHistory = pref.GetString("search_string", "");
-
         }
 
 
         void AddEvents()
         {
-           
+			recycler.ScrollChange += (object sender, View.ScrollChangeEventArgs e) =>
+			{
+				LinearLayoutManager layout = layoutManager as LinearLayoutManager;
+
+				var visibleItemCount = recycler.ChildCount;
+				var totalItemCount = recycler.GetAdapter().ItemCount;
+				var pastVisiblesItems = layout.FindFirstVisibleItemPosition();
+
+				if ((visibleItemCount + pastVisiblesItems) == totalItemCount)
+				{
+					//TODO: Handle Load more
+					//Toast.MakeText(this, "Load more", ToastLength.Short).Show();
+
+					var lastPositon = itemCount;
+					itemCount += itemCount;
+					LoadSongWithThread(searchString, itemCount);
+					layout.ScrollToPosition(lastPositon);
+					HideLoading();
+				}
+			};
+
             searchView.Focus += (sender, e) =>
             {
                 searchView.SetSearchHint("Search...");
 
-
                 searchView.SwapSuggestions(SearchHelper.GetHistorySearch(searchSuggestItem));
-
-                //searchView.SwapSuggestions(SearchHistoryHelper.GetHistoryAsync(this, 3));
-
             };
 
             searchView.QueryChange += (sender, e) =>
@@ -173,7 +186,8 @@ namespace KaraokeApp
                 var historySuggestion = (SearchSuggestion)e.SearchSuggestion;
                 searchString = historySuggestion.SongName;
 
-                LoadSongWithThread(searchString);
+                LoadSongWithThread(searchString,itemCount);
+				searchView.SetSearchHint(searchString);
             };
 
 
@@ -181,7 +195,6 @@ namespace KaraokeApp
             {
                 if (searchString != "")
                 {
-
                     //Shared Preferences
                     //remove search string if contains
                     searchHistory += searchString + ";";
@@ -189,8 +202,7 @@ namespace KaraokeApp
                     editor.PutString("search_string", searchHistory);
                     editor.Commit();
 
-
-                    LoadSongWithThread(searchString);
+                    LoadSongWithThread(searchString,itemCount);
                     searchView.SetSearchHint(searchString);
                 }
             };
@@ -202,9 +214,6 @@ namespace KaraokeApp
         /// </summary>
         public override void OnBackPressed()
         {
-
-
-
             if (count_pressed == 0)
             {
                 back_pressed = DateTime.Now;
